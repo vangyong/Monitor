@@ -1,4 +1,4 @@
-var baseUrl = "http://192.168.1.101:9090/spring4mybatis/";
+var baseUrl = "http://192.168.1.100:9090/spring4mybatis/";
 
 
 

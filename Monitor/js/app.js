@@ -43,12 +43,20 @@
 	        req.setRequestHeader('Authorization', make_basic_auth(AuthUserLoginID, AuthUserPassword));
 	    },	*/
 		success : function(data) {
-			var tdata =data;
-			if (data.status == 'OK') { 
-				//alert(JSON.parse(data))
-				alert("Call Success");
+			if (data.status == 'OK') {
+					//var users = JSON.parse(localStorage.getItem('$users') || '[]');
+					var user = data.data;
+					var authed = false;
+					if(loginInfo.account == user.loginName && loginInfo.password == user.password){
+						authed = true;
+					}
+					if (authed) {
+						return owner.createState(loginInfo.account, callback);
+					} else {
+						return callback('用户名或密码错误');
+					}		
 				} else {
-				alert("Call Failed");
+					return callback('登录失败');
 				}
 			}		
 		});
