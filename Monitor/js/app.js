@@ -27,7 +27,7 @@
 		} else {
 			return callback('用户名或密码错误');
 		}*/
-		var loginurl = baseUrl+"sys/user"+"/login";
+		var loginurl = baseUrl+"system/user"+"/login";
 		var LoginParameter={
 			loginName : loginInfo.account,
 			password : loginInfo.password
@@ -92,7 +92,7 @@
 		users.push(regInfo);
 		localStorage.setItem('$users', JSON.stringify(users));*/
 		
-		var registerurl = baseUrl+"sys/user"+"/register";
+		var registerurl = baseUrl+"system/user"+"/register";
 		var RegisterParameter={
 			mobileNumber : regInfo.account,
 			password : regInfo.password
