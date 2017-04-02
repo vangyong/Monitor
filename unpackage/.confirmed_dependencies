@@ -1,12 +1,14 @@
 {
 	"main.html": {
 		"refer": [
-			"setting.html"
+			"setting.html",
+			"page/setting.html"
 		],
 		"resources": [
 			"js/app.js",
 			"js/mui.min.js",
-			"css/mui.min.css"
+			"css/mui.min.css",
+			"fonts/mui.ttf"
 		]
 	},
 	"login.html": {
